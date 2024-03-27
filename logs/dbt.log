@@ -1,0 +1,101 @@
+[0m11:52:16.044425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029FA8334710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029FA7F7E8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029FA83345D0>]}
+
+
+============================== 11:52:16.044425 | e3727d6e-761a-4d93-9e6a-199ba1896d0d ==============================
+[0m11:52:16.044425 [info ] [MainThread]: Running with dbt=1.7.10
+[0m11:52:16.044425 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\KrishnaveerSingh\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:52:16.050940 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/KrishnaveerSingh/.dbt')}
+[0m11:52:16.050940 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m11:53:06.079213 [debug] [MainThread]: Starter project path: C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m11:53:06.107102 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:53:06.107102 [info ] [MainThread]: Setting up your profile.
+[0m11:55:56.175441 [error] [MainThread]: Encountered an error:
+
+[0m11:55:56.178799 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m11:55:56.183339 [debug] [MainThread]: Command `dbt init` failed at 11:55:56.183339 after 220.17 seconds
+[0m11:55:56.183339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029FA8347090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029FA8347D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029FA83477D0>]}
+[0m11:55:56.184339 [debug] [MainThread]: Flushing usage events
+[0m11:55:57.118160 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m11:56:06.549521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AE3E9246D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AE3E924DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AE3E9249D0>]}
+
+
+============================== 11:56:06.552524 | 52051a97-efb8-4e7d-b314-f9ad4ff8b132 ==============================
+[0m11:56:06.552524 [info ] [MainThread]: Running with dbt=1.7.10
+[0m11:56:06.553525 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\KrishnaveerSingh\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m11:56:18.673900 [info ] [MainThread]: A project called custom_postgres already exists here.
+[0m11:56:18.678181 [debug] [MainThread]: Command `dbt init` succeeded at 11:56:18.677185 after 12.16 seconds
+[0m11:56:18.679180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AE37F04AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AE37E78590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AE37E78490>]}
+[0m11:56:18.679180 [debug] [MainThread]: Flushing usage events
+[0m11:56:19.200886 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m12:03:48.189202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002080A7A4110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002080A7A43D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002080A7A4490>]}
+
+
+============================== 12:03:48.196867 | af0c03d9-f098-416e-92ad-d6d646eaa3b1 ==============================
+[0m12:03:48.196867 [info ] [MainThread]: Running with dbt=1.7.10
+[0m12:03:48.199482 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\KrishnaveerSingh\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m12:03:54.139780 [debug] [MainThread]: Starter project path: C:\Users\KrishnaveerSingh\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\include\starter_project
+[0m12:03:54.180651 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:03:54.180651 [info ] [MainThread]: Setting up your profile.
+[0m12:06:18.991391 [info ] [MainThread]: Profile custom_postgres written to C:\Users\KrishnaveerSingh\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:06:18.995501 [debug] [MainThread]: Command `dbt init` succeeded at 12:06:18.994459 after 150.84 seconds
+[0m12:06:18.995501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020803D34AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020803CA8590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020803CA8490>]}
+[0m12:06:18.997007 [debug] [MainThread]: Flushing usage events
+[0m12:06:19.642591 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
